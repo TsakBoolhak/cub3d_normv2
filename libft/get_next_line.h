@@ -23,7 +23,8 @@ typedef struct	s_gnl
 
 int				get_next_line(int fd, char **line, int stop);
 int				handle_stop(int fd, int stop, t_list **lst);
-int				fill_result(t_list **lst, t_list **origin, int *flag, char **result);
+int				fill_result(t_list **lst, t_list **origin, int *flag
+					, char **result);
 int				split_first_nl(char *nl, t_list **lst, char **result);
 int				read_file(int fd, t_list **lst, t_list **tmp, char *result);
 t_list			*set_fd_lst(int fd, t_list **lst);
