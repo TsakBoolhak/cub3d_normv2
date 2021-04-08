@@ -14,7 +14,7 @@
 #include "cub3d.h"
 #include <stdlib.h>
 
-int	check_around_cell(int x, int y, t_cub *cub)
+int		check_around_cell(int x, int y, t_cub *cub)
 {
 	if (x < cub->map_w - 1 && !ft_strchr("021 NEWS", cub->map[y][x + 1]))
 		return (return_error("Error\nInvalid character in map\n", -1));
@@ -52,7 +52,7 @@ void	set_spawn(int x, int y, t_cub *cub)
 		cub->player.dir = 270.0;
 }
 
-int	set_sprite_position(int x, int y, t_cub *cub)
+int		set_sprite_position(int x, int y, t_cub *cub)
 {
 	t_sprite	**sprites;
 	int			i;
@@ -81,7 +81,7 @@ int	set_sprite_position(int x, int y, t_cub *cub)
 	return (0);
 }
 
-int	ft_check_map_cell(int x, int y, t_cub *cub, int *spawn)
+int		ft_check_map_cell(int x, int y, t_cub *cub, int *spawn)
 {
 	if (!ft_strchr("021 NEWS", cub->map[y][x]))
 		return (return_error("Error\nInvalid character in map\n", -1));
@@ -102,7 +102,7 @@ int	ft_check_map_cell(int x, int y, t_cub *cub, int *spawn)
 	return (0);
 }
 
-int	map_is_valid(t_cub *cub)
+int		map_is_valid(t_cub *cub)
 {
 	int	x;
 	int	y;

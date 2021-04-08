@@ -29,7 +29,7 @@ void	check_actions(t_cub *cub)
 		move_advance(cub, 0, 1);
 }
 
-int	render_frame(void *cub_ptr)
+int		render_frame(void *cub_ptr)
 {
 	t_cub	*cub;
 
@@ -44,7 +44,7 @@ int	render_frame(void *cub_ptr)
 	return (0);
 }
 
-int	run_cub(t_cub *cub)
+int		run_cub(t_cub *cub)
 {
 	t_data	*img;
 

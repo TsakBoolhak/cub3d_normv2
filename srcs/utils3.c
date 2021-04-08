@@ -17,7 +17,7 @@ double	degree_to_radiant(double degree)
 	return (degree * M_PI / 180.0);
 }
 
-int	get_x_vector(double dir)
+int		get_x_vector(double dir)
 {
 	if (dir == 0.0 || dir == 180.0)
 		return (0);
@@ -27,7 +27,7 @@ int	get_x_vector(double dir)
 		return (-1);
 }
 
-int	get_y_vector(double dir)
+int		get_y_vector(double dir)
 {
 	if (dir == 270.0 || dir == 90.0)
 		return (0);

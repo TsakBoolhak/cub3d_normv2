@@ -13,7 +13,7 @@
 #include "cub3d.h"
 #include <math.h>
 
-int	get_sprite_pixel(int *y, t_sprite *sprite, t_cub *cub)
+int		get_sprite_pixel(int *y, t_sprite *sprite, t_cub *cub)
 {
 	t_pos		ratio;
 	static int	rety = -2;
