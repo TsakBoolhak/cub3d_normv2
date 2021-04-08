@@ -13,7 +13,7 @@
 #include <stddef.h>
 
 static void	*ft_memmove_from_end(void *dst, const void *src, size_t len)
-{	
+{
 	unsigned char	*dst_ptr;
 	unsigned char	*src_ptr;
 
@@ -30,7 +30,7 @@ static void	*ft_memmove_from_end(void *dst, const void *src, size_t len)
 }
 
 static void	*ft_memmove_from_begin(void *dst, const void *src, size_t len)
-{	
+{
 	unsigned char	*dst_ptr;
 	unsigned char	*src_ptr;
 
@@ -46,7 +46,7 @@ static void	*ft_memmove_from_begin(void *dst, const void *src, size_t len)
 	return (dst);
 }
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void		*ft_memmove(void *dst, const void *src, size_t len)
 {
 	if (!src || !dst || !len)
 		return (dst);

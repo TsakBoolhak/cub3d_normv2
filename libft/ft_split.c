@@ -42,7 +42,7 @@ static size_t	ft_count_letters(char const *s, char sep)
 	return (count);
 }
 
-static char	*ft_alloc_word(char const *s, char c, size_t word)
+static char		*ft_alloc_word(char const *s, char c, size_t word)
 {
 	size_t	i;
 	size_t	j;
@@ -70,7 +70,7 @@ static char	*ft_alloc_word(char const *s, char c, size_t word)
 	return (result);
 }
 
-char	**ft_split(char const *s, char c)
+char			**ft_split(char const *s, char c)
 {
 	char	**result;
 	size_t	words_count;

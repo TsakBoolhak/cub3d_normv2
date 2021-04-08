@@ -9,6 +9,7 @@
 /*   Updated: 2021/01/29 19:36:07 by Tsak             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "ft_list.h"
 #include "get_next_line.h"
 #include <stdlib.h>
@@ -20,7 +21,7 @@ void	del_n_set_first(t_list **to_del, t_list **origin)
 	ft_lstdelone(to_del, &free);
 }
 
-int	handle_stop(int fd, int stop, t_list **lst)
+int		handle_stop(int fd, int stop, t_list **lst)
 {
 	t_list	*tmp;
 
