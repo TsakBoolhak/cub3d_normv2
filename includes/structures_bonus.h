@@ -87,7 +87,7 @@ typedef struct						s_sprite
 }									t_sprite;
 
 typedef struct s_bmp				t_bmp;
-struct								__attribute__((__packed__))	s_bmp
+struct __attribute__((__packed__))		s_bmp
 {
 	char		bmpsign[2];
 	uint32_t	file_size;
