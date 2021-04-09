@@ -21,7 +21,7 @@ double	get_distance(t_pos pos1, t_pos pos2)
 	return (dist);
 }
 
-int	get_sprite_height(t_cub *cub, t_sprite *sprite)
+int		get_sprite_height(t_cub *cub, t_sprite *sprite)
 {
 	double	line_height;
 	int		start;
@@ -40,7 +40,7 @@ int	get_sprite_height(t_cub *cub, t_sprite *sprite)
 	return (end - start);
 }
 
-int	set_angle(t_pos player, t_sprite *sprite, t_pos *hit, t_pos *angle)
+int		set_angle(t_pos player, t_sprite *sprite, t_pos *hit, t_pos *angle)
 {
 	if (sprite->rad < 0)
 		sprite->rad *= -1;
@@ -64,7 +64,7 @@ int	set_angle(t_pos player, t_sprite *sprite, t_pos *hit, t_pos *angle)
 	return (0);
 }
 
-int	set_sprite(t_cub *cub, t_sprite *sprite, t_pos *hit, t_pos *sprite_hit)
+int		set_sprite(t_cub *cub, t_sprite *sprite, t_pos *hit, t_pos *sprite_hit)
 {
 	t_pos	angle;
 
@@ -88,7 +88,7 @@ int	set_sprite(t_cub *cub, t_sprite *sprite, t_pos *hit, t_pos *sprite_hit)
 	return (0);
 }
 
-void	set_sprite_dist(t_coord	sprite, t_pos *hit, t_cub *cub)
+void	set_sprite_dist(t_coord sprite, t_pos *hit, t_cub *cub)
 {
 	t_sprite	**sprites;
 	int			i;

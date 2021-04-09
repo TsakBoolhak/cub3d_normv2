@@ -14,7 +14,7 @@
 #include <mlx.h>
 #include <math.h>
 
-int	set_mini_map_color(int column, int line, char **map)
+int		set_mini_map_color(int column, int line, char **map)
 {
 	char	c;
 
@@ -54,10 +54,10 @@ void	fill_mini_map_line(t_cub *cub, int line)
 	}
 }
 
-int	set_minimap_dimensions(t_cub *cub)
+int		set_minimap_dimensions(t_cub *cub)
 {
-	cub->minmap.map_px_w = cub->width / 4 ;
-	cub->minmap.map_px_h = cub->height / 4 ;
+	cub->minmap.map_px_w = cub->width / 4;
+	cub->minmap.map_px_h = cub->height / 4;
 	if (cub->minmap.map_px_w < cub->map_w && cub->width >= cub->map_w * 2)
 		cub->minmap.map_px_w = cub->map_w;
 	if (cub->minmap.map_px_h < cub->map_h && cub->height >= cub->map_h * 2)
@@ -75,7 +75,7 @@ int	set_minimap_dimensions(t_cub *cub)
 	return (0);
 }
 
-int	mini_map_to_img(t_cub *cub)
+int		mini_map_to_img(t_cub *cub)
 {
 	int			i;
 	t_data		tmp;

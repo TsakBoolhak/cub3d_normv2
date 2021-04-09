@@ -52,7 +52,7 @@ void	get_first_image(t_cub *cub)
 	raycast_loop(cub);
 }
 
-int	write_into_bmp(int fd, t_bmp *bmp, t_cub *cub)
+int		write_into_bmp(int fd, t_bmp *bmp, t_cub *cub)
 {
 	int		i;
 	int		*image;
@@ -70,7 +70,7 @@ int	write_into_bmp(int fd, t_bmp *bmp, t_cub *cub)
 	return (0);
 }
 
-int	generate_bmp_file(t_cub *cub, char *save)
+int		generate_bmp_file(t_cub *cub, char *save)
 {
 	int		fd;
 	int		ret;

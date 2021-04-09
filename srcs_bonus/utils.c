@@ -13,7 +13,7 @@
 #include "libft.h"
 #include <stdlib.h>
 
-int	return_error(char *str, int ret)
+int		return_error(char *str, int ret)
 {
 	ft_putstr_fd(str, 2);
 	return (ret);
@@ -57,7 +57,7 @@ size_t	ft_count_char_in_str(const char *s, int c)
 	return (i);
 }
 
-int	ft_strischarset(char *str, char *charset)
+int		ft_strischarset(char *str, char *charset)
 {
 	size_t	i;
 
@@ -73,7 +73,7 @@ int	ft_strischarset(char *str, char *charset)
 	return (str[i] == '\0' && i > 0);
 }
 
-int	ft_strisdigit(char *str)
+int		ft_strisdigit(char *str)
 {
 	size_t	i;
 

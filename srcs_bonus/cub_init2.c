@@ -17,7 +17,7 @@
 #include "cub3d_bonus.h"
 #include "libft.h"
 
-int	init_window(t_cub *cub)
+int		init_window(t_cub *cub)
 {
 	int	width;
 	int	height;
@@ -106,7 +106,7 @@ void	sort_sprite_tab(t_sprite **sprites)
 	}
 }
 
-int	prepare_run(t_cub *cub)
+int		prepare_run(t_cub *cub)
 {
 	if (init_window(cub) == -1)
 	{

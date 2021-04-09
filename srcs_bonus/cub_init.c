@@ -30,7 +30,7 @@ void	free_pos_tab(t_sprite **tab)
 	free(tab);
 }
 
-int	cub_init(t_cub *cub)
+int		cub_init(t_cub *cub)
 {
 	t_data	*gun;
 	char	*str;
@@ -77,7 +77,7 @@ void	free_cub(t_cub *cub)
 	free(cub->mlx);
 }
 
-int	map_init(int fd, char **line, t_cub *cub)
+int		map_init(int fd, char **line, t_cub *cub)
 {
 	int	ret;
 	int	len;
@@ -104,7 +104,7 @@ int	map_init(int fd, char **line, t_cub *cub)
 		return (0);
 }
 
-int	map_adjust(t_cub *cub)
+int		map_adjust(t_cub *cub)
 {
 	char	*tmp;
 	int		len;

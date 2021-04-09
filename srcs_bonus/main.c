@@ -42,7 +42,7 @@ char	*get_save_path(char *cubpath, t_cub *cub)
 	return (savename);
 }
 
-int	run_save(char *cubpath, t_cub *cub)
+int		run_save(char *cubpath, t_cub *cub)
 {
 	int		ret;
 	char	*savename;
@@ -59,7 +59,7 @@ int	run_save(char *cubpath, t_cub *cub)
 	return (ret);
 }
 
-int	main(int ac, char *av[])
+int		main(int ac, char *av[])
 {
 	t_cub	cub;
 

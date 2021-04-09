@@ -13,7 +13,7 @@
 #include "cub3d_bonus.h"
 #include <math.h>
 
-int	get_sprite_pixel(int *y, t_sprite *sprite, t_cub *cub)
+int		get_sprite_pixel(int *y, t_sprite *sprite, t_cub *cub)
 {
 	t_pos		ratio;
 	static int	rety = -2;
@@ -78,7 +78,7 @@ char	*get_texture_pixel(int *y, t_cub *cub)
 	return ((char *)(src.addr));
 }
 
-int	get_gun_pixel(int x, int y, int	gheight, t_cub *cub)
+int		get_gun_pixel(int x, int y, int gheight, t_cub *cub)
 {
 	t_pos	ratio;
 	t_coord	ret;

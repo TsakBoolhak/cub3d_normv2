@@ -14,7 +14,7 @@
 #include <stdlib.h>
 #include "libft.h"
 
-int	rgb_to_r(int rgb)
+int		rgb_to_r(int rgb)
 {
 	int	r;
 
@@ -22,7 +22,7 @@ int	rgb_to_r(int rgb)
 	return (r >> 24);
 }
 
-int	rgb_to_g(int rgb)
+int		rgb_to_g(int rgb)
 {
 	int	g;
 
@@ -30,7 +30,7 @@ int	rgb_to_g(int rgb)
 	return (g >> 24);
 }
 
-int	rgb_to_b(int rgb)
+int		rgb_to_b(int rgb)
 {
 	int	b;
 
@@ -38,12 +38,12 @@ int	rgb_to_b(int rgb)
 	return (b >> 24);
 }
 
-int	argb_to_int(int a, int r, int g, int b)
+int		argb_to_int(int a, int r, int g, int b)
 {
 	return ((a << 24) + (r << 16) + (g << 8) + b);
 }
 
-int	check_overflow(char *nb)
+int		check_overflow(char *nb)
 {
 	char	*max_int;
 	int		max_len;

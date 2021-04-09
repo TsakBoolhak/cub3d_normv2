@@ -77,7 +77,7 @@ void	rotate_dir(t_cub *cub, int direction)
 		cub->player.dir -= 360.0;
 }
 
-int	handle_keypress(int key, void *cub_ptr)
+int		handle_keypress(int key, void *cub_ptr)
 {
 	t_cub	*cub;
 
@@ -101,7 +101,7 @@ int	handle_keypress(int key, void *cub_ptr)
 	return (0);
 }
 
-int	handle_keyrelease(int key, void *cub_ptr)
+int		handle_keyrelease(int key, void *cub_ptr)
 {
 	t_cub	*cub;
 
