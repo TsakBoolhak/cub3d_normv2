@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <math.h>
-#include "cub3d_bonus.h" 
+#include "cub3d_bonus.h"
 
 t_pos	get_next_intersect(t_pos origin, double rad, t_coord vect, int loop)
 {

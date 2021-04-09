@@ -48,7 +48,7 @@ int		check_overflow(char *nb)
 	char	*max_int;
 	int		max_len;
 	int		nb_len;
-	int	 	ret;
+	int		ret;
 	int		tab[2];
 
 	max_int = ft_longtoa_base(INT_MAX, "0123456789");
