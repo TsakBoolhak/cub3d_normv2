@@ -14,7 +14,7 @@
 # define STRUCTURES_H
 # include <stdint.h>
 
-typedef struct s_data
+typedef struct						s_data
 {
 	void	*img;
 	char	*addr;
@@ -22,22 +22,22 @@ typedef struct s_data
 	int		len;
 	int		height;
 	int		end;
-}t_data;
+}									t_data;
 
-typedef struct s_coord
+typedef struct						s_coord
 {
 	int	x;
 	int	y;
-}t_coord;
+}									t_coord;
 
-typedef struct s_pos
+typedef struct						s_pos
 {
 	double	x;
 	double	y;
 	double	dir;
-}t_pos;
+}									t_pos;
 
-typedef struct s_ray
+typedef struct						s_ray
 {
 	double	rad;
 	double	fov_angle;
@@ -49,9 +49,9 @@ typedef struct s_ray
 	t_coord	vect;
 	t_pos	hit;
 	int		side;
-}t_ray;
+}									t_ray;
 
-typedef struct s_action
+typedef struct						s_action
 {
 	int	rotate_left;
 	int	rotate_right;
@@ -60,9 +60,9 @@ typedef struct s_action
 	int	move_forward;
 	int	move_backward;
 	int	exit;
-}t_action;
+}									t_action;
 
-typedef struct s_sprite
+typedef struct						s_sprite
 {
 	int		true_sprite_h;
 	int		side;
@@ -73,9 +73,9 @@ typedef struct s_sprite
 	t_pos	hit;
 	double	rad;
 	t_coord	coord;
-}t_sprite;
+}									t_sprite;
 
-typedef struct s_bmp	t_bmp;
+typedef struct s_bmp				t_bmp;
 struct __attribute__((__packed__))	s_bmp
 {
 	char		bmpsign[2];
@@ -95,7 +95,7 @@ struct __attribute__((__packed__))	s_bmp
 	uint32_t	important_colors;
 };
 
-typedef struct s_cub
+typedef struct 						s_cub
 {
 	int			width;
 	int			height;
@@ -119,6 +119,6 @@ typedef struct s_cub
 	char		**map;
 	void		*mlx;
 	void		*win;
-}t_cub;
+}									t_cub;
 
 #endif
