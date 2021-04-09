@@ -67,8 +67,8 @@ int		render_frame(void *cub_ptr)
 	int		player_color;
 	t_data	*minimap;
 
-	minimap = &cub->minmap.minimap;
 	cub = (t_cub *)cub_ptr;
+	minimap = &cub->minmap.minimap;
 	check_actions(cub);
 	cub->ray.fov_angle = cub->player.dir - FOV / 2.0;
 	if (cub->ray.fov_angle < 0.0)

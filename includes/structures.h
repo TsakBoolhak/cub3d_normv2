@@ -75,7 +75,8 @@ typedef struct s_sprite
 	t_coord	coord;
 }t_sprite;
 
-typedef struct s_bmp
+typedef struct s_bmp	t_bmp;
+struct __attribute__((__packed__))	s_bmp
 {
 	char		bmpsign[2];
 	uint32_t	file_size;
@@ -92,7 +93,7 @@ typedef struct s_bmp
 	int32_t		vert_res;
 	uint32_t	color_table;
 	uint32_t	important_colors;
-}__attribute__((__packed__))t_bmp;
+};
 
 typedef struct s_cub
 {
