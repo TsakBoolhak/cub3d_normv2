@@ -95,7 +95,7 @@ struct __attribute__((__packed__))	s_bmp
 	uint32_t	important_colors;
 };
 
-typedef struct 						s_cub
+typedef struct						s_cub
 {
 	int			width;
 	int			height;
