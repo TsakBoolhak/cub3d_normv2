@@ -85,27 +85,27 @@ typedef struct						s_sprite
 	double	rad;
 	t_coord	coord;
 }									t_sprite;
-/*
-**typedef struct s_bmp				t_bmp;
-**struct __attribute__((__packed__))	s_bmp
-**{
-**	char		bmpsign[2];
-**	uint32_t	file_size;
-**	uint32_t	reserved;
-**	uint32_t	pixel_offset;
-**	uint32_t	header_size;
-**	int32_t		width;
-**	int32_t		height;
-**	uint16_t	color_planes;
-**	uint16_t	color_depth;
-**	uint32_t	compress;
-**	uint32_t	raw_bmp_size;
-**	int32_t		horiz_res;
-**	int32_t		vert_res;
-**	uint32_t	color_table;
-**	uint32_t	important_colors;
-**};
-*/
+
+typedef struct s_bmp				t_bmp;
+struct __attribute__((__packed__))	s_bmp
+{
+	char		bmpsign[2];
+	uint32_t	file_size;
+	uint32_t	reserved;
+	uint32_t	pixel_offset;
+	uint32_t	header_size;
+	int32_t		width;
+	int32_t		height;
+	uint16_t	color_planes;
+	uint16_t	color_depth;
+	uint32_t	compress;
+	uint32_t	raw_bmp_size;
+	int32_t		horiz_res;
+	int32_t		vert_res;
+	uint32_t	color_table;
+	uint32_t	important_colors;
+}									;
+
 typedef struct						s_cub
 {
 	int			width;
