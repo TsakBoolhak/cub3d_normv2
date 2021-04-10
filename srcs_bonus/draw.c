@@ -74,18 +74,18 @@ void	draw_sprites(int x, t_cub *cub)
 	i = -1;
 	while (sprites && sprites[++i] && sprites[i]->mid.dir < cub->ray.hit_dist)
 	{
-		if (sprites[i]->mid.dir > 0)
+		if (!(sprites[i]->mid.dir > 0))
+			continue ;
+		y = ((cub->height - sprites[i]->sprite_h) / 2) - 1;
+		start = y + 1;
+		while (++y < cub->height && y < sprites[i]->sprite_h + start)
 		{
-			y = ((cub->height - sprites[i]->sprite_h) / 2) - 1;
-			start = y + 1;
-			while (++y < cub->height && y < sprites[i]->sprite_h + start)
+			color = get_sprite_pixel(&y, sprites[i], cub);
+			if (color && !cub->draw_buf[y])
 			{
-				color = get_sprite_pixel(&y, sprites[i], cub);
-				if (color && !cub->draw_buf[y])
-				{
-					my_pixel_put(&cub->screen, x, y, color);
-					cub->draw_buf[y] = 1;
-				}
+				set_shadows(&color, sprites[i]->shadow_ratio);
+				my_pixel_put(&cub->screen, x, y, color);
+				cub->draw_buf[y] = 1;
 			}
 		}
 	}

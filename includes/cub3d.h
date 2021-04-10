@@ -50,7 +50,7 @@ void	draw_wall_to_screen(int x, t_cub *cub);
 void	init_header(t_bmp *bmp, t_cub *cub);
 void	get_first_image(t_cub *cub);
 int		write_into_bmp(int fd, t_bmp *bmp, t_cub *cub);
-int		generate_bmp_file(t_cub *cub, char *save);
+int		generate_bmp_file(t_cub *cub, char **save);
 
 /*
 ** get_pixels.c

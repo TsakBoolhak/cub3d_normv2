@@ -96,8 +96,8 @@ void	set_sprite_dist(t_coord sprite, t_pos *hit, t_cub *cub)
 	t_sprite	*tmp;
 
 	sprites = cub->sprites;
-	i = 0;
-	while (sprites && sprites[i])
+	i = -1;
+	while (sprites && sprites[++i])
 	{
 		if (sprites[i]->coord.x == sprite.x && sprites[i]->coord.y == sprite.y)
 		{
@@ -105,12 +105,14 @@ void	set_sprite_dist(t_coord sprite, t_pos *hit, t_cub *cub)
 			{
 				tmp = sprites[i];
 				tmp->mid.dir = get_distance(cub->player, sprite_hit);
+				tmp->shadow_ratio = 8 / tmp->mid.dir;
+				if (tmp->shadow_ratio > 1.0)
+					tmp->shadow_ratio = 1.0;
 				tmp->hit = sprite_hit;
 				tmp->hit.dir = get_distance(tmp->start, tmp->hit);
 				tmp->sprite_h = get_sprite_height(cub, tmp);
 			}
 			return ;
 		}
-		i++;
 	}
 }

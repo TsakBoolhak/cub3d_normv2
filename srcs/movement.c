@@ -80,17 +80,17 @@ int		handle_keypress(int key, void *cub_ptr)
 	cub = (t_cub *)cub_ptr;
 	if (key == 65307)
 		mlx_loop_end(cub->mlx);
-	if (key == 65361 || key == 97)
+	if (key == 65361)
 		cub->action.rotate_left = 1;
-	if (key == 65363 || key == 101)
+	if (key == 65363)
 		cub->action.rotate_right = 1;
-	if (key == 65362 || key == 122)
+	if (key == 65362 || key == 122 || key == 119)
 		cub->action.move_forward = 1;
 	if (key == 65364 || key == 115)
 		cub->action.move_backward = 1;
 	if (key == 100)
 		cub->action.move_right = 1;
-	if (key == 113)
+	if (key == 113 || key == 97)
 		cub->action.move_left = 1;
 	return (0);
 }
@@ -100,17 +100,17 @@ int		handle_keyrelease(int key, void *cub_ptr)
 	t_cub	*cub;
 
 	cub = (t_cub *)cub_ptr;
-	if (key == 65361 || key == 97)
+	if (key == 65361)
 		cub->action.rotate_left = 0;
-	if (key == 65363 || key == 101)
+	if (key == 65363)
 		cub->action.rotate_right = 0;
-	if (key == 65362 || key == 122)
+	if (key == 65362 || key == 122 || key == 119)
 		cub->action.move_forward = 0;
 	if (key == 65364 || key == 115)
 		cub->action.move_backward = 0;
 	if (key == 100)
 		cub->action.move_right = 0;
-	if (key == 113)
+	if (key == 113 || key == 97)
 		cub->action.move_left = 0;
 	return (0);
 }

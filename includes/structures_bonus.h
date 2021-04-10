@@ -83,6 +83,7 @@ typedef struct						s_sprite
 	t_pos	end;
 	t_pos	hit;
 	double	rad;
+	double	shadow_ratio;
 	t_coord	coord;
 }									t_sprite;
 

@@ -49,13 +49,14 @@ int		run_save(char *cubpath, t_cub *cub)
 
 	savename = get_save_path(cubpath, cub);
 	if (!savename)
-		return (-1);
+	{
+		free(savename);
+		return (return_error("Error\nMemory allocation fialed\n", -1));
+	}
 	ft_putstr_fd("Generating bitmap file into saves directory.\n", 1);
 	ft_putstr_fd("Please wait... ", 1);
 	ft_putstr_fd("(The larger the resolution is, the longer it takes)\n", 1);
-	ret = generate_bmp_file(cub, savename);
-	free(savename);
-	free_cub(cub);
+	ret = generate_bmp_file(cub, &savename);
 	return (ret);
 }
 

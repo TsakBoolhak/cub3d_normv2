@@ -32,12 +32,11 @@ int	set_resolution(char *line, t_cub *cub)
 		cub->height = ft_atoi(tab[1]);
 		if (!ft_strisdigit(tab[0]) || !ft_strisdigit(tab[1])
 			|| cub->width < 1 || cub->height < 1)
-		{
-			ft_putstr_fd("Error\nResolution's values must be numbers", 2);
-			ret = return_error(" greater than zero\n", 0);
-		}
-		else if (check_overflow(tab[0]) || check_overflow(tab[1]))
-			ret = return_error("Error\nResolution's value too large\n", 0);
+			ret = return_error("Error\nWrong resolution value(s)\n", 0);
+		if (cub->width > 7680)
+			cub->width = 7680;
+		if (cub->height > 4320)
+			cub->height = 4320;
 	}
 	ft_free_tab((void **)tab);
 	return (ret);
@@ -90,7 +89,7 @@ int	check_colour_values(char **tab)
 		if (ft_strlen(value) > 3 || !ft_strisdigit(value) || rgb[i++] > 255)
 		{
 			free(value);
-			return (return_error("Error\nWrong value(s) for color's rgb", -1));
+			return (return_error("Error\nWrong value(s) in color\n", -1));
 		}
 		free(value);
 	}
